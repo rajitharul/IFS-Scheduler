@@ -68,6 +68,11 @@
 	<a href ="${pageContext.request.contextPath}/virtualMachine/addVirtualMachine">Add Virtual Machine</a>
 
 
+<br><br><br><br>
+
+	<a href ="${pageContext.request.contextPath}/leaveApplication/addLeaveApplication">Add LeaveApplication</a>
+
+
 </body>
 
 

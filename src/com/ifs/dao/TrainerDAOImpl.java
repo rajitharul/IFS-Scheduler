@@ -24,7 +24,7 @@ public class TrainerDAOImpl implements TrainerDAO {
 	public Trainer getTrainer(String trainerId) {
 		//get the current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
-	
+		
 		Trainer trainer = currentSession.get(Trainer.class, trainerId);
 		
 		return trainer;

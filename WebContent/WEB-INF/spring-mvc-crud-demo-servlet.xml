@@ -28,6 +28,7 @@
 	</bean>
 
     <!-- Step 1: Define Database DataSource / connection pool -->
+	
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
@@ -42,6 +43,7 @@
 	</bean>  
 	
     <!-- Step 2: Setup Hibernate session factory -->
+	
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />

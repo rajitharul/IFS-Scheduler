@@ -12,11 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
-
 
 
 @Entity
@@ -53,6 +52,14 @@ public class Trainer {
 
 	public Trainer() {
 	}
+	
+	
+	@OneToMany(fetch = FetchType.LAZY,mappedBy = "trainer" ,
+			cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}
+			)
+	  
+	private List<LeaveApplication> leaveApplications;
+	
 	
 	
 	@ManyToMany(fetch = FetchType.LAZY , cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})

@@ -42,7 +42,6 @@ public class TrainingSessionServiceImpl implements TrainingSessionService {
 		
 		for(int i=0 ; i<trainingSession.gettrainerids().length ; i++) {
 			
-			System.out.println(trainerDAO.getTrainer(trainingSession.gettrainerids()[i]).getName());
 			
 			trainingSession.add(trainerDAO.getTrainer(trainingSession.gettrainerids()[i]));
 			
